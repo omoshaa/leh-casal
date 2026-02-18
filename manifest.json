@@ -1,0 +1,22 @@
+{
+  "name": "Nosso Universo",
+  "short_name": "Nosso Universo",
+  "description": "Um lugar só nosso.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0a0000",
+  "theme_color": "#0a0000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "https://via.placeholder.com/192x192/4a0c1f/d4af37?text=M%26L",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://via.placeholder.com/512x512/4a0c1f/d4af37?text=M%26L",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

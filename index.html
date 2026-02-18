@@ -1,0 +1,256 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Moisés &amp; Letícia </title>
+  <meta name="description" content="Um universo construído para você." />
+  <meta name="theme-color" content="#0a0000" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- OVERLAY ANTI-FLASH -->
+  <div id="page-fade" aria-hidden="true"></div>
+
+  <!-- CURSOR PERSONALIZADO -->
+  <div id="cursor-dot" aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+
+  <!-- CANVAS PÉTALAS -->
+  <canvas id="emotion-rain" aria-hidden="true"></canvas>
+
+  <!-- SPLASH SCREEN -->
+  <div id="splash" aria-hidden="true">
+    <div class="splash-inner">
+      <div class="splash-monogram">
+        <span>M</span>
+        <span class="splash-amp">&amp;</span>
+        <span>L</span>
+      </div>
+      <p class="splash-tagline">Moisés &amp; Letícia  um lugar só nosso.</p>
+      <div class="splash-bar"><div class="splash-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- NAV LATERAL -->
+  <nav class="pill-nav" id="pill-nav" aria-label="Navegação por seção">
+    <a href="#hero"     data-label="Início"  class="pill-dot active" aria-label="Início"></a>
+    <a href="#momentos" data-label="Galeria" class="pill-dot" aria-label="Galeria"></a>
+    <a href="#carta"    data-label="Carta"   class="pill-dot" aria-label="Carta"></a>
+    <a href="#razoes"   data-label="Razões"  class="pill-dot" aria-label="Razões"></a>
+    <a href="#playlist" data-label="Playlist" class="pill-dot" aria-label="Playlist"></a>
+  </nav>
+
+  <!--  HERO  -->
+  <header class="hero section reveal" id="hero">
+    <div class="glass hero-card">
+      <p class="overline">Para Letícia, com todo o amor de Moisés</p>
+      <h1>Nosso Amor<br /><em>em Cada Segundo</em></h1>
+      <p class="subtitle">Desde o dia em que você disse sim, cada segundo ficou mais bonito.</p>
+
+      <!-- Dias em destaque -->
+      <p class="days-headline"><span id="days-big">0</span> dias de amor</p>
+
+      <!-- Contador detalhado -->
+      <div class="counter" aria-label="Contador desde o início do relacionamento">
+        <div class="counter-item">
+          <span id="days">00</span>
+          <small>Dias</small>
+        </div>
+        <div class="counter-item">
+          <span id="hours">00</span>
+          <small>Horas</small>
+        </div>
+        <div class="counter-item">
+          <span id="minutes">00</span>
+          <small>Minutos</small>
+        </div>
+        <div class="counter-item">
+          <span id="seconds">00</span>
+          <small>Segundos</small>
+        </div>
+      </div>
+      <p class="counter-hint">Desde <span id="relationship-start-label">--/--/----</span></p>
+
+      <!-- Contador próximo aniversário -->
+      <div class="anniversary-wrap" id="anniversary-wrap">
+        <p class="anniversary-label"> Falta para 1 ano juntos</p>
+        <div class="anniversary-counter">
+          <span class="ann-item"><strong id="ann-days">--</strong><em>dias</em></span>
+          <span class="ann-sep">:</span>
+          <span class="ann-item"><strong id="ann-hours">--</strong><em>horas</em></span>
+          <span class="ann-sep">:</span>
+          <span class="ann-item"><strong id="ann-minutes">--</strong><em>min</em></span>
+          <span class="ann-sep">:</span>
+          <span class="ann-item"><strong id="ann-seconds">--</strong><em>seg</em></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!--  GALERIA  -->
+    <section class="section reveal" id="momentos">
+      <div class="section-head">
+        <h2>Galeria de Momentos</h2>
+        <p>Memórias que brilham no escuro.</p>
+      </div>
+      <div class="gallery">
+        <figure class="glass photo-card" data-caption="Nosso momento especial">
+          <img src="fotos/foto1.jpg" alt="Moisés e Letícia" loading="lazy" />
+        </figure>
+        <figure class="glass photo-card" data-caption="Primeira viagem juntos">
+          <img src="fotos/foto2.jpg" alt="Moisés e Letícia" loading="lazy" />
+        </figure>
+        <figure class="glass photo-card" data-caption="Aquele dia inesquecível">
+          <img src="fotos/foto3.jpg" alt="Moisés e Letícia" loading="lazy" />
+        </figure>
+        <figure class="glass photo-card" data-caption="Essa foto é a coisa mais fofa do mundo">
+          <img src="fotos/foto4.jpg" alt="Moisés e Letícia" loading="lazy" />
+        </figure>
+        <figure class="glass photo-card" data-caption="A coisa mais linda que já vi">
+          <img src="fotos/foto5.jpg" alt="Moisés e Letícia" loading="lazy" />
+        </figure>
+        <figure class="glass photo-card" data-caption="Meu lugar favorito: ao seu lado">
+          <img src="fotos/foto6.jpg" alt="Moisés e Letícia" loading="lazy" />
+        </figure>
+      </div>
+    </section>
+
+    <!--  CARTA DE AMOR  -->
+    <section class="section reveal" id="carta">
+      <div class="section-head">
+        <h2>Carta de Amor</h2>
+        <p>Um pedaço da minha alma para você.</p>
+      </div>
+      <div class="envelope-wrap" id="envelope-wrap">
+        <div class="envelope" id="envelope">
+          <div class="env-flap env-flap-back"></div>
+          <div class="env-body">
+            <div class="env-seal">&#10084;</div>
+          </div>
+          <div class="env-flap env-flap-front"></div>
+          <p class="env-hint">Toque para abrir</p>
+        </div>
+        <article class="letter gradient-border" id="letter-article">
+          <p id="letter-text">
+            Meu amor, em cada amanhecer encontro um novo motivo para agradecer por você existir.
+            Seu sorriso é minha calmaria, seu abraço é meu lar, e seu olhar é a poesia mais bonita
+            que já li na vida. Prometo cuidar de nós, hoje e sempre, com a delicadeza que o nosso
+            amor merece.
+          </p>
+          <p class="signature" id="letter-signature">Com amor, Moisés. </p>
+        </article>
+      </div>
+    </section>
+
+    <!--  RAZÕES  -->
+    <section class="section" id="razoes">
+      <div class="section-head reveal">
+        <h2>Razões pra te Amar</h2>
+        <p>Vire cada cartão para descobrir.</p>
+      </div>
+      <div class="reasons-grid">
+        <div class="reason-card reveal"><div class="reason-inner">
+          <div class="reason-front"><span>01</span></div>
+          <div class="reason-back"><p>Seu sorriso ilumina qualquer ambiente</p></div>
+        </div></div>
+        <div class="reason-card reveal"><div class="reason-inner">
+          <div class="reason-front"><span>02</span></div>
+          <div class="reason-back"><p>Sua gargalhada é o meu som favorito</p></div>
+        </div></div>
+        <div class="reason-card reveal"><div class="reason-inner">
+          <div class="reason-front"><span>03</span></div>
+          <div class="reason-back"><p>A forma como você cuida de quem ama</p></div>
+        </div></div>
+        <div class="reason-card reveal"><div class="reason-inner">
+          <div class="reason-front"><span>04</span></div>
+          <div class="reason-back"><p>Seus olhos que falam sem dizer uma palavra</p></div>
+        </div></div>
+        <div class="reason-card reveal"><div class="reason-inner">
+          <div class="reason-front"><span>05</span></div>
+          <div class="reason-back"><p>A paz que sinto quando estou com você</p></div>
+        </div></div>
+        <div class="reason-card reveal"><div class="reason-inner">
+          <div class="reason-front"><span>06</span></div>
+          <div class="reason-back"><p>O jeito único que você vê o mundo</p></div>
+        </div></div>
+        <div class="reason-card reveal"><div class="reason-inner">
+          <div class="reason-front"><span>07</span></div>
+          <div class="reason-back"><p>Cada abraço que parece um lar</p></div>
+        </div></div>
+        <div class="reason-card reveal"><div class="reason-inner">
+          <div class="reason-front"><span>08</span></div>
+          <div class="reason-back"><p>Sua inteligência que me surpreende sempre</p></div>
+        </div></div>
+        <div class="reason-card reveal"><div class="reason-inner">
+          <div class="reason-front"><span>09</span></div>
+          <div class="reason-back"><p>A leveza e alegria que você traz para minha vida</p></div>
+        </div></div>
+        <div class="reason-card reveal"><div class="reason-inner">
+          <div class="reason-front"><span>10</span></div>
+          <div class="reason-back"><p>Cada momento ao seu lado me faz querer ficar para sempre</p></div>
+        </div></div>
+      </div>
+    </section>
+
+    <!--  PLAYLIST  -->
+    <section class="section reveal" id="playlist">
+      <div class="section-head">
+        <h2>Nossa Trilha Sonora</h2>
+        <p>Canções que contam nossa história.</p>
+      </div>
+      <div class="glass playlist-wrap">
+        <iframe
+          title="Playlist romântica"
+          style="border-radius:12px"
+          src="https://open.spotify.com/embed/playlist/5DbWC94dx6d1zr4l7cbjBF?utm_source=generator&theme=0"
+          width="100%"
+          height="352"
+          frameborder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy">
+        </iframe>
+      </div>
+    </section>
+
+  </main>
+
+  <!--  FOOTER  -->
+  <footer class="section footer reveal">
+    <p>Feito com amor por Moisés, só para você, Letícia </p>
+    <div class="secret-wrap">
+      <p class="secret-hint">Tem um segredo escondido aqui</p>
+      <div class="secret-input-row">
+        <input type="password" id="secret-input" placeholder="Digite a palavra mágica" aria-label="Palavra secreta" autocomplete="off" />
+        <button id="secret-btn" aria-label="Revelar segredo">&#10084;</button>
+      </div>
+      <div id="secret-reveal" class="secret-reveal glass" aria-live="polite">
+        <img id="secret-photo" src="fotos/cat.jpg" alt="Foto especial" />
+        <p id="secret-message">Você encontrou o segredo.<br />Eu te amo mais do que todas as palavras desse site conseguem dizer.<br />Hoje, amanhã e sempre.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Fechar">&times;</button>
+    <div class="lightbox-inner">
+      <img id="lightbox-img" src="" alt="Imagem ampliada" />
+      <p id="lightbox-caption" class="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <!-- FAB -->
+  <button class="fab-heart" id="fab-heart" aria-label="Surpresa de amor">&#10084;</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
